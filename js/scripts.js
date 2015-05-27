@@ -16,3 +16,16 @@ var pigLatin = function(word) {
   }
   return final;
 };
+
+$(function() {
+
+  $("form#word").submit(function(event) {
+    var word = $("input#word").val();
+    var result = pigLatin(word);
+    debugger;
+    $(".answer").text(result);
+    $(".word").text(word);
+
+    event.preventDefault();
+  });
+});
